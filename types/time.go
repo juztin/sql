@@ -32,7 +32,7 @@ func (nt *NullTime) Scan(value interface{}) error {
 	return nil
 }
 
-func (nt *NullTime) Value() (driver.Value, error) {
+func (nt NullTime) Value() (driver.Value, error) {
 	if !nt.Valid {
 		return nil, nil
 	}
